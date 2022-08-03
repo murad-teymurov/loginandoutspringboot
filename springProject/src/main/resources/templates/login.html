@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+
+<div>
+    <p style="color: red" th:text="${error}"></p>
+</div>
+<div>
+    <p style="color: green" th:text="${logout}"></p>
+</div>
+    <form th:action=@{/login} method="post">
+       <div class="container">
+           <label for="email">email</label>:
+           <input type="text" id="email" name="email" autofocus="autofocus" /> <br />
+           <label for="password">Password</label>:
+           <input type="password" id="password" name="password" /> <br />
+           <input type="submit" value="Log in" />
+       </div>
+
+    </form>
+
+</body>
+</html>
